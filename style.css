@@ -103,4 +103,4 @@ button {
 .back {
   color:dodgerblue;float:left;positon:relative;margin-top:-10vh;font-size:15px;
 }
-h2{cursor:pointer;display:inline-block}
+h2{cursor:pointer !important;display:inline-block !important;}
