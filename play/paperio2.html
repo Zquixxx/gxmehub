@@ -1,0 +1,52 @@
+<link rel = "stylesheet" href="/style.css">
+
+<h2>Paper.io 2</h2>
+
+<button>Click now!</button>
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://script.google.com/macros/s/AKfycbxO8jKpDOwFYpSGrGbReR4Mv2e1-6T4uHsWBphygjzyG8Qqpvij/exec?mid=ACjPJvF3RvJN6ufwCWpNNV7Par8IPo_9lbty1bO67Qvx2J8QH4lQgX-BZCHdug82MzvSQC5pYR9rmj_VC8TA3lvxG5elm5-BxJGA_RfS1UGToz7yegvUAvawzQNt8R9EAHoF3T_as6giOZ2e-5x05Q&bc=transparent&f=Helvetica%2C+Arial%2C+Verdana%2C+sans-serif&tc=%23b5b5b5&lc=%23f3f2f2";
+
+    if (url) {
+        var win;
+
+        document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#ff5148';
+            document.querySelector('button').innerHTML="Page Opened!";
+        };
+    }
+</script>
+<style>
+* {
+    color: white; 
+    font-family: arial;
+    text-align: center;
+}
+button {
+    width: 220px; 
+    height: 40px;
+    border-radius: 12px;
+    background-color: #1F51FF;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    transition: background-color 500ms;
+}
+button:hover {
+    background-color: #1F51FF;
+}
+</style>

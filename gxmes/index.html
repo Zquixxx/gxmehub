@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href = "../style.css"/>
+  <script src = "../gxmes.js"></script>
+    <title>Gxme hub | Gxmes</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href = "/">Home</a>
+      |
+      <a href="/announcements">Announcements</a>
+      |
+      <a href="/contact">Contact</a>
+      |
+      <a href="/about">About</a>
+      |
+      <a href="/gxmes">Gxmes</a>
+      |
+      <a href="/mc">MC 1.5.2</a>
+      |
+      <a href="/pxy">Pr*xies and more!</a>
+    </div>  
+    <br>
+    <h1 style="font-size:50px">Gxmes</h1>
+    <form>
+      <input name = "q" type = "text" placeholder = "search for gxmes..."/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+      <br></br>
+    <script>
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    })?.q;
+    const paramLow = params ? params.toLowerCase() : ""
+    const listOfGames = ([
+    // add gxmes here
+    "Tetris",
+    "Run 3",
+    "Russian Driving 3D",
+    "Slope 2",
+    "Spend Bill Gates Money",
+    "Spend Jeff Bezos Money",
+    "2048",
+    "Banana Bread",
+    "Tower Stack",
+    "Rooftop Snipers",
+    "Tube Jumpers",
+    "Super Hot",
+    "Mini Golf 2D",
+    "Temple Crossing",
+    "FNF Links",
+    "Maximum Acceleration",
+    "Draw The Hill",
+    "Slope",
+    "Offline Dino Chrome",
+    "Doge Miner",
+    "Glitch Maze",
+    "Stack Bump 3D",
+    "Getting Over It",
+    "Make A Car Simulator",
+    "Vex 3",
+    "Vex 4",
+    "Vex 5",
+    "Vex 6",
+    "Roblox",
+    "Cookie Run: Kingdom",
+    "1v1.lol",
+    "Fluid Simulation",
+    "FNAF 1",
+    "FNAF 4",
+    "Jenga",
+    "Snake",
+    "Crossy Road",
+    "Madalin Stunt Car 2",
+    "Basketball Stars",
+    "Multi-Gxmes",
+    "Paper.io 2",
+    "Furious Racing 3D",
+    "Fighter Aircraft Pilot",
+    "Geometry Dash",
+    "Particle Clicker",
+    "Disc*rd",
+    "FNAF Sister Location",
+    "Drift Boss",
+    "Zombs Royale",
+    "Orbital Survival",
+    "Economical 2",
+    "Sealflix (free movies)",
+    "FNAF 3",
+    "Justfall.lol",
+    "FNAF 2",
+    "Wings.io",
+    "Drift Hunters",
+    "Chess",
+    "1 On 1 Soccer",
+    "Rolling Sky",
+    "Cookie Clicker",
+    "Shell Shockers",
+    "Retrobowl",
+    "Baldi's Basics",
+    "ESPN Free",
+    "Short Life",
+    "Snowbattle.io",
+    "Gun Mayham 1",
+    "Gun Mayham 2",
+    "Flight",
+    "FNAF Customizable",
+    "Doom 1",
+    "Moto X3M",
+    "Grand Prix Circut",
+    "MS Flight 1.0",
+    "Deal Or No Deal",
+    "Soccer Legends",
+    "Riddle School 1",
+    "Riddle School 2",
+    "Riddle School 3",
+    "Riddle School 4",
+    "Riddle School 5",
+    "Riddle Transfer 1",
+    "Riddle Transfer 2",
+    "DVD ScreenSaver",
+    "Doom 2",
+    "Spotify",
+    "Pandemic 1",
+    "Pandemic 2",
+    "The Impossible Quiz 1",
+    "The Impossible Quiz 2",
+    "Worlds Hardest Gxme 1",
+    "Worlds Hardest Gxme 2",
+    "Instagram",
+    "TikTok",
+    "Among Us",
+    "Achievement Unlocked",
+    "DEFCON",
+    "Temple Run 2",
+    "Google Feud",
+    "Burger Tycoon"
+    ]).filter(e=>e.toLowerCase().match(new RegExp(`${paramLow}.*`)))
+      listOfGames.forEach(name => document.body.innerHTML += `<h2>${name}</h2><br>`)
+      window.onload = () => {
+      document.querySelector("input").value = params
+        elemsrendered()
+      }
+        </script>
+    <style>h2{cursor:pointer;display:inline-block}</style>
+
+<div class="container">
+  <h1 class="heading" data-target-resolver></h1>
+</div>
+  </body>
+</html>
