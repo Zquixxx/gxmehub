@@ -14,9 +14,13 @@
     text-align: center;
   }
 
-  h2 {
+  .h2 {
     display:inline-block;
     font-size: 28px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -43,13 +47,6 @@
     100%{background-position:0% 50%}
   }
 
-
-  h2 {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
 a {
   display: inline-block;
@@ -106,3 +103,4 @@ button {
 .back {
   color:dodgerblue;float:left;positon:relative;margin-top:-10vh;font-size:15px;
 }
+h2{cursor:pointer;display:inline-block}

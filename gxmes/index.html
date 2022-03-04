@@ -8,19 +8,19 @@
   </head>
   <body>
     <div class="topnav">
-      <a href = "/">Home</a>
+      <a href = "../">Home</a>
       |
-      <a href="/announcements">Announcements</a>
+      <a href="../announcements">Announcements</a>
       |
-      <a href="/contact">Contact</a>
+      <a href="../contact">Contact</a>
       |
-      <a href="/about">About</a>
+      <a href="../about">About</a>
       |
-      <a href="/gxmes">Gxmes</a>
+      <a href="../gxmes">Gxmes</a>
       |
-      <a href="/mc">MC 1.5.2</a>
+      <a href="../mc">MC 1.5.2</a>
       |
-      <a href="/pxy">Pr*xies and more!</a>
+      <a href="../pxy">Pr*xies and more!</a>
     </div>  
     <br>
     <h1 style="font-size:50px">Gxmes</h1>
@@ -137,15 +137,13 @@
     "Temple Run 2",
     "Google Feud",
     "Burger Tycoon"
-    ]).filter(e=>e.toLowerCase().match(new RegExp(`${paramLow}.*`)))
-      listOfGames.forEach(name => document.body.innerHTML += `<h2>${name}</h2><br>`)
+    ]).filter(e=>e.toLowerCase().match(new RegExp(`^${paramLow}.*`)))
+      listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name}</h2><br>`)
       window.onload = () => {
       document.querySelector("input").value = params
         elemsrendered()
       }
         </script>
-    <style>h2{cursor:pointer;display:inline-block}</style>
-
 <div class="container">
   <h1 class="heading" data-target-resolver></h1>
 </div>
