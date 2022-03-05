@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/x-icon" href="">
+    <script src = "../favicon.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "../style.css"/>
   <script src = "../gxmes.js"></script>
@@ -22,8 +24,10 @@
       |
       <a href="https://adfoc.us/73203082329487">MC 1.5.2</a>
       |
+      <a href="../settings/">Settings</a>
+      |
       <a href="../pxy/">Pr*xies and more!</a>
-    </div>  
+    </div> 
     <br>
     <h1 style="font-size:50px">Gxmes</h1>
     <form>
@@ -31,7 +35,7 @@
             <button type="submit"><i class="fa fa-search"></i></button>
     </form>
       <br></br>
-    <script>
+    <script defer>
     const params = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     })?.q;
@@ -140,13 +144,13 @@
     "Google Feud",
     "Burger Tycoon",
     "Evio",
-    "MercZone"
+    "MercZone",
+    "Fireboy & Watergirl 1",
+    "Osu"
     ]).filter(e=>e.toLowerCase().match(new RegExp(`^${paramLow}.*`)))
       listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name}</h2><br>`)
-      window.onload = () => {
       document.querySelector("input").value = params
         elemsrendered()
-      }
         </script>
 <div class="container">
   <h1 class="heading" data-target-resolver></h1>

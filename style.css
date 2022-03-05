@@ -1,10 +1,13 @@
   @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Source+Code+Pro:wght@600&display=swap');
 
-  body {
+  body{
+    overflow-x:hidden;
     margin-top: 100px;
     background: #141414;
     color: #F9F9F9;
     font-family: 'Source Code Pro', monospace;
+    height:100%;
+    width:100%;
   }
 
  h1 {
@@ -103,4 +106,19 @@ button {
 .back {
   color:dodgerblue;float:left;positon:relative;margin-top:-10vh;font-size:15px;
 }
-h2{cursor:pointer !important;display:inline-block !important;}
+h2,i{cursor:pointer !important;display:inline-block !important;}
+
+i {
+  font-size:35px;
+}
+#counter {
+  text-align:left;
+  display:block;
+  position:absolute;
+  bottom:1vh;
+}
+
+.secret {
+  color:inherit;
+  text-decoration:none !important;
+}

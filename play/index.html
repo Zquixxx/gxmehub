@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Gxme Hub | Gxmes</title>
-    <link rel = "stylesheet" href = "../style.css"/>
-  </head>
-  <body>
-    <div class="topnav">
-      <a href = "../">Home</a>
-      |
-      <a href="../announcements">Announcements</a>
-      |
-      <a href="../contact">Contact</a>
-      |
-      <a href="../about">About</a>
-      |
-      <a href="../gxmes">Gxmes</a>
-      |
-      <a href="../mc">MC 1.5.2</a>
-      |
-      <a href="../pxy">Pr*xies and more!</a>
-    </div>
-    <h1 id = "gamename" style="font-size:50px"></h1>
+
     <script>
+      const isMatch = (arr,match) => arr.filter(e=>e==match).length
       window.onload = () => {
 const gxme = decodeURI(window.location.search.slice(1));
 const gxmes = new Map([
@@ -120,15 +99,20 @@ const gxmes = new Map([
     ["Worlds Hardest Gxme 1","https://gxme-hub-official.unknowncicada.repl.co/play/worldshardestgame1.html"],
     ["Worlds Hardest Gxme 2","https://gxme-hub-official.unknowncicada.repl.co/play/worldshardestgame2.html"],
     ["Instagram","https://cdn.wholesomewindow.xyz/service/hvtrs8%2F-wuw%2Cilsvaercm%2Ccmm-"],
-    ["TikTok","https://gxme-hub-official.unknowncicada.repl.co/play/tiktok"],
+    ["TikTok","https://www.goodeducation.gq/gxmes/tiktok"],
     ["Among Us","https://google-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/453535fgsew45/among-us1.xml?attredirects=0&amp;d=1&quot"],
     ["Achievement Unlocked","https://gxme-hub-official.unknowncicada.repl.co/play/achievementunlocked.html"],
     ["DEFCON","https://cdn.wholesomewindow.xyz/service/hvtrs8%2F-ccrpigr%2C4qupe%2Cmn"],
     ["Temple Run 2","https://legends0002.github.io/tpp2/"],
     ["Google Feud","https://script.google.com/macros/s/AKfycbwsZ8H_YdcS9zu7gsGcgpY67QDa94RpbNL4OH0OlPvuunzwiNGd/exec"],
     ["Burger Tycoon",""],
-    ["evio",""]
+    ["Fireboy & Watergirl 1","https://legends0002.github.io/FBWG1/"],
+    ["Evio","https://node7.truemyth.ml/web/_aHR0cHM6Ly9ldi5pbw==_/"],
+["Osu","https://webosu.online"]
     ])
+    if (isMatch(["Osu","Cookie Clicker","Roblox","TikTok"],gxme)) {
+      location.href = gxmes.get(gxme)
+    } else {
     document.write(`
 <link rel = "stylesheet" href="../style.css">
 
@@ -183,9 +167,6 @@ button:hover {
 }
 </style>
 `)
-    gxmes.get(gxme)
+    }
       }
     </script>
-  </body>
-</html> 
-
