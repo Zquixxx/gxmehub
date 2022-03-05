@@ -8,7 +8,7 @@ const gxmes = new Map([
     ["Tetris","https://chvin.github.io/react-tetris/?lan=en"],
     ["Run 3","https://theadvancedsociety-tam.tbt.mx/tam-run3/"],
     ["Russian Driving 3D","https://advanced-channeler.02.gz-associates.com/?t=tam-russian-car-driver-hd"],
-    ["Slope 2",""],
+    ["Slope 2","nowork"],
     ["Spend Bill Gates Money","https://neal.fun/spend/"],
     ["Spend Jeff Bezos Money","https://3pic.github.io/money"],
     ["2048","https://hczhcz.github.io/2048/20ez/"],
@@ -25,7 +25,7 @@ const gxmes = new Map([
     ["Slope","https://legends0002.github.io/slope-1/"],
     ["Offline Dino Chrome","https://chrisdothtml.github.io/chrome-dino/"],
     ["Doge Miner","https://legends0002.github.io/DogeMiner/"],
-    ["Glitch Maze","blank"],
+    ["Glitch Maze","https://legends0002.github.io/gxmehub/play/glitchmaze.html"],
     ["Stack Bump 3D","glitchmaze.html"],
     ["Getting Over It","https://scratch.mit.edu/projects/389464290/embed"],
     ["Make A Car Simulator","https://theadvancedsociety-tam.tbt.mx/tam-make-a-car-simulator/"],
@@ -41,7 +41,7 @@ const gxmes = new Map([
     ["FNAF 4","https://www.scienceeducation.gq/go/hvtrs8%2F-sarctah%2Cimgcmgs%2Crgpn.ao-arp%2Chvmn%3Fkd%3F8%3A656%3A8%3A%26vupbm%3Ddansg%26dunl%2Fsargel%3Dvrwe/"],
     ["Jenga","https://chandlerprall.github.io/Physijs/examples/jenga.html"],
     ["Snake","https://legends0002.github.io/gxmehub/play/snake.html"],
-    ["Crossy Road",""],
+    ["Crossy Road","nowork"],
     ["Madalin Stunt Cars 2","https://gavan228.github.io/gaming/madalin-cars-multiplayer/"],
     ["Basketball Stars","https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml"],
     ["Multi-Gxmes","https://legends0002.github.io/gfiles/list.html"],
@@ -56,13 +56,13 @@ const gxmes = new Map([
     ["Zombs Royale","https://theadvancedsociety-tam.tbt.mx/tmm-zombsroyale/"],
     ["Orbital Survival","https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/aOZ5lcoo/index.html"],
     ["Economical 2","https://www.scienceeducation.gq/go/hvtrs8%2F-v4p%3Bd%3Bt6.qsn.jwadl.lev%2Fjtol-2795808-ildgx%2Chvmn/"],
-    ["Sealflix (free movies)",""],
+    ["Sealflix (free movies)","nowork"],
     ["FNAF 3","https://scienceeducation.gq/go/hvtrs8%2F-w%3A.qnmkkdm.aoo%2Feaoeq%2Fjtol7%2Fdncf-3-ildgx%2Chvmn/"],
     ["Justfall.lol","https://www.scienceeducation.gq/go/hvtrs8%2F-jwsvfcln.non/"],
-    ["FNAF 2",""],
+    ["FNAF 2","nowork"],
     ["Wings.io","https://www.scienceeducation.gq/go/hvtrs8%2F-wknes%2Cim/"],
     ["Drift Hunters","https://debbiewatermanphd.com/editor/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html"],
-    ["Chess",""],
+    ["Chess","nowork"],
     ["1 On 1 Soccer","https://e9x.github.io/ruffle-example"],
     ["Rolling Sky","https://advanced-channeler.02.gz-associates.com/?t=tmm-webgl-rollingsky"],
     ["Cookie Clicker","https://legends0002.github.io/cookieclicker/"],
@@ -81,7 +81,7 @@ const gxmes = new Map([
     ["Grand Prix Circut","https://pixelsuft.github.io/dosbox-demos/grandprix/"],
     ["MS Flight 1.0","https://pixelsuft.github.io/dosbox-demos/msflight/"],
     ["Deal Or No Deal","https://www.medicineeducation.gq/go/hvtrs8%2F-wuw%2Cgcmgnmrc.aoo%2Fwpnocd-gcmgs-suf-Dgan-mr%2FNm-Fecl-/"],
-    ["Soccer Legends",""],
+    ["Soccer Legends","nowork"],
     ["Riddle School 1","https://legends0002.github.io/gxmehub/play/riddleschool1.html"],
     ["Riddle School 2","https://legends0002.github.io/gxmehub/play/riddleschool2.html"],
     ["Riddle School 3","https://legends0002.github.io/gxmehub/play/riddleschool3.html"],
@@ -105,12 +105,12 @@ const gxmes = new Map([
     ["DEFCON","https://cdn.wholesomewindow.xyz/service/hvtrs8%2F-ccrpigr%2C4qupe%2Cmn"],
     ["Temple Run 2","https://legends0002.github.io/tpp2/"],
     ["Google Feud","https://script.google.com/macros/s/AKfycbwsZ8H_YdcS9zu7gsGcgpY67QDa94RpbNL4OH0OlPvuunzwiNGd/exec"],
-    ["Burger Tycoon",""],
+    ["Burger Tycoon","nowork"],
     ["Fireboy & Watergirl 1","https://legends0002.github.io/FBWG1/"],
     ["Evio","https://node7.truemyth.ml/web/_aHR0cHM6Ly9ldi5pbw==_/"],
 ["Osu","https://webosu.online"]
     ])
-    if (isMatch(["Osu","Cookie Clicker","Roblox","TikTok"],gxme)) {
+    if (isMatch(["Osu","Cookie Clicker","Roblox","TikTok", "FNAF 4"],gxme)) {
       location.href = gxmes.get(gxme)
     } else {
     document.write(`
@@ -118,7 +118,7 @@ const gxmes = new Map([
 
 <h2 style = "color:white">${gxme}</h2>
 <br>
-<button>Play now!</button>
+<button>${gxmes.get(gxme) == "nowork" ? "this game is unsupported :(" : "Play now!"}</button>
 <script>
     var urlObj = new window.URL(window.location.href);
     var url = "${gxmes.get(gxme)}";
