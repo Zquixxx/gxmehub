@@ -56,116 +56,161 @@
     const paramLow = params ? params.toLowerCase() : ""
     const listOfGames = ([
     // add gxmes here
-    "Tetris",
-    "Run 3",
-    "Russian Driving 3D",
-    "Slope 2",
-    "Spend Bill Gates Money",
-    "Spend Jeff Bezos Money",
-    "2048",
-    "Banana Bread",
-    "Tower Stack",
-    "Rooftop Snipers",
-    "Tube Jumpers",
-    "Super Hot",
-    "Mini Golf 2D",
-    "Temple Crossing",
-    "FNF Links",
-    "Maximum Acceleration",
-    "Draw The Hill",
-    "Slope",
-    "Offline Dino Chrome",
-    "Doge Miner",
-    "Glitch Maze",
-    "Stack Bump 3D",
-    "Getting Over It",
-    "Make A Car Simulator",
-    "Vex 3",
-    "Vex 4",
-    "Vex 5",
-    "Vex 6",
-    "Roblox",
-    "Cookie Run: Kingdom",
-    "1v1.lol",
-    "Fluid Simulation",
-    "FNAF 1",
-    "FNAF 4",
-    "Jenga",
-    "Snake",
-    "Crossy Road",
-    "Madalin Stunt Car 2",
-    "Basketball Stars",
-    "Multi-Gxmes",
-    "Paper.io 2",
-    "Furious Racing 3D",
-    "Fighter Aircraft Pilot",
-    "Geometry Dash",
-    "Particle Clicker",
-    "Disc*rd",
-    "FNAF Sister Location",
-    "Drift Boss",
-    "Zombs Royale",
-    "Orbital Survival",
-    "Economical 2",
-    "Sealflix (free movies)",
-    "FNAF 3",
-    "Justfall.lol",
-    "FNAF 2",
-    "Wings.io",
-    "Drift Hunters",
-    "Chess",
-    "1 On 1 Soccer",
-    "Rolling Sky",
-    "Cookie Clicker",
-    "Shell Shockers",
-    "Retrobowl",
-    "Baldi's Basics",
-    "ESPN Free",
-    "Short Life",
-    "Snowbattle.io",
-    "Gun Mayham 1",
-    "Gun Mayham 2",
-    "Flight",
-    "FNAF Customizable",
-    "Doom 1",
-    "Moto X3M",
-    "Grand Prix Circut",
-    "MS Flight 1.0",
-    "Deal Or No Deal",
-    "Soccer Legends",
-    "Riddle School 1",
-    "Riddle School 2",
-    "Riddle School 3",
-    "Riddle School 4",
-    "Riddle School 5",
-    "Riddle Transfer 1",
-    "Riddle Transfer 2",
-    "DVD ScreenSaver",
-    "Doom 2",
-    "Spotify",
-    "Pandemic 1",
-    "Pandemic 2",
-    "The Impossible Quiz 1",
-    "The Impossible Quiz 2",
-    "Worlds Hardest Gxme 1",
-    "Worlds Hardest Gxme 2",
-    "Instagram",
-    "TikTok",
-    "Among Us",
-    "Achievement Unlocked",
-    "DEFCON",
-    "Temple Run 2",
-    "Google Feud",
-    "Burger Tycoon",
-    "Evio",
-    "MercZone",
-    "Fireboy & Watergirl 1",
-    "Osu",
+      <div class="dropdown">
+  <button class="dropbtn">Filter by genre</button>
+  <div class="dropdown-content">
+    <a data-type = "pzl" href="#">Puzzle</a>
+    <a data-type = "run" href="#">Running</a>
+    <a data-type = "drv" ref="#">Driving/flying</a>
+    <a data-type = "sht" href="#">Shooter</a>
+    <a data-type = "plt" href="#">Platformer</a>
+    <a data-type = "idl" href="#">Idle</a>
+    <a data-type = "spt" href="#">Sport</a>
+    <a data-type = "msc" href="#">Misc</a>
+    <a data-type = "hrr" href="#">Horror</a>
+    
+    
+  </div>
+</div><br><br>
+    <script defer>
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    const query = params?.q;
+    const type = params?.t ?? ".*";
+    const paramLow = query ? query.toLowerCase() : ""
+    const listOfGames = ([
+    // add gxmes here
+    /*
+    pzl = puzzle
+    run = run w/ traps
+    drv = drive
+    sht = shooter
+    msc = miscellanious
+    plt = platformer
+    idl = idle
+    spt = sport
+    */
+    ["Tetris","pzl"],
+    ["Run 3","run"],
+    ["Slope 2","drv"],
+    ["Spend Bill Gates Money","msc"],
+    ["Spend Jeff Bezos Money","msc"],
+    ["2048","pzl"],
+    ["Banana Bread","sht"],
+    ["Tower Stack","pzl"],
+    ["Rooftop Snipers","sht"],
+    ["Tube Jumpers","mlt"],
+    ["Super Hot","sht"],
+    ["Mini Golf 2D","spt"],
+    ["Temple Crossing","plt"],
+    ["FNF Links","msc"],
+    ["Maximum Acceleration","drv"],
+    ["Draw The Hill","drv"],
+    ["Slope","drv"],
+    ["Offline Dino Chrome","plt"],
+    ["Doge Miner","idl"],
+    ["Glitch Maze","pzl"],
+    ["Stack Bump 3D","pzl"],
+    ["Getting Over It","plt"],
+    ["Make A Car Simulator","drv"],
+    ["Vex 3","plt"],
+    ["Vex 4","plt"],
+    ["Vex 5","plt"],
+    ["Vex 6","plt"],
+    ["Roblox","mlt"],
+    ["Cookie Run: Kingdom","msc"],
+    ["1v1.lol","sht"],
+    ["Fluid Simulation","msc"],
+    ["FNAF 1","hrr"],
+    ["FNAF 4","hrr"],
+    ["Jenga","pzl"],
+    ["Snake","msc"],
+    ["Crossy Road","run"],
+    ["Madalin Stunt Car 2","drv"],
+    ["Basketball Stars","spt"],
+    ["Multi-Gxmes","msc"],
+    ["Paper.io 2","msc"],
+    ["Fighter Aircraft Pilot","drv"],
+    ["Geometry Dash","msc"],
+    ["Particle Clicker","idl"],
+    ["Disc*rd","msc"],
+    ["FNAF Sister Location","hrr"],
+    ["Drift Boss","drv"],
+    ["Zombs Royale","sht"],
+    ["Orbital Survival","sht"],
+    ["Economical 2","plt"],
+    ["Sealflix (free movies)","msc"],
+    ["FNAF 3","hrr"],
+    ["Justfall.lol","mlt"],
+    ["FNAF 2","hrr"],
+    ["Wings.io","mlt"],
+    ["Drift Hunters","drv"],
+    ["Chess","mlt"],
+    ["1 On 1 Soccer","mlt"],
+    ["Rolling Sky","run"],
+    ["Cookie Clicker","idl"],
+    ["Shell Shockers","sht"],
+    ["Retrobowl","spt"],
+    ["Baldi's Basics","msc"],
+    ["ESPN Free","spt"],
+    ["Short Life","msc"],
+    ["Snowbattle.io","mlt"],
+    ["Gun Mayham 1","sht"],
+    ["Gun Mayham 2","sht"],
+    ["Flight","drv"],
+    ["FNAF Customizable","hrr"],
+    ["Doom 1","sht"],
+    ["Moto X3M","drv"],
+    ["Grand Prix Circut","drv"],
+    ["MS Flight 1.0","drv"],
+    ["Deal Or No Deal","msc"],
+    ["Soccer Legends","spt"],
+    ["Riddle School 1","pzl"],
+    ["Riddle School 2","pzl"],
+    ["Riddle School 3","pzl"],
+    ["Riddle School 4","pzl"],
+    ["Riddle School 5","pzl"],
+    ["Riddle Transfer 1","pzl"],
+    ["Riddle Transfer 2","pzl"],
+    ["DVD ScreenSaver","msc"],
+    ["Doom 2","sht"],
+    ["Spotify","msc"],
+    ["Pandemic 1","msc"],
+    ["Pandemic 2","msc"],
+    ["The Impossible Quiz 1","pzl"],
+    ["The Impossible Quiz 2","pzl"],
+    ["Worlds Hardest Gxme 1","pzl"],
+    ["Worlds Hardest Gxme 2","pzl"],
+    ["Instagram","msc"],
+    ["TikTok","msc"],
+    ["Among Us","mlt"],
+    ["Achievement Unlocked","plt"],
+    ["DEFCON","msc"],
+    ["Temple Run 2","run"],
+    ["Google Feud","msc"],
+    ["Burger Tycoon","idl"],
+    ["Evio","sht"],
+    ["MercZone","sht"],
+    ["Fireboy & Watergirl 1","plt"],
+    ["Osu","msc"],
     "Basketball.io",
-    "FNAF 2",
-    "FNAF 3",
-    "Gangster Man 3D",
-    "Poppys Playtime"
+    ["Gangster Man 3D","drv"],
+    ["Poppys Playtime","hrr"]
+    ]).filter(e=>e[0].toLowerCase().match(new RegExp(`^${paramLow}.*`))).filter(e=>e[1].match(type))
+      listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name[0]}</h2><br>`)
+      document.querySelector("input").value = query
+        elemsrendered()
+        document.querySelectorAll(".dropdown-content a").forEach(e=>e.addEventListener("click",() => {
+          location.href = "./?t=" + e.dataset.type
+        }))
+        </script>
+<div class="container">
+  <h1 class="heading" data-target-resolver></h1>
+</div>
+  </body>
+</html>
+</div>
     ]).filter(e=>e.toLowerCase().match(new RegExp(`^${paramLow}.*`)))
       listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name}</h2><br>`)
       document.querySelector("input").value = params
