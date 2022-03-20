@@ -1,3 +1,5 @@
+<div id = "stuff"></div>
+<div id = "content">
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,18 +9,9 @@
     <link rel = "stylesheet" href = "../style.css"/>
   <script src = "../gxmes.js"></script>
 
-    <audio src="https://xlegends.github.io/gxmehub/indian.mp3"></audio>
-    <script>
-    window.addEventListener("DOMContentLoaded", event => {
-  const audio = document.querySelector("audio");
-  audio.volume = 1;
-  audio.play();
-});
-    </script>
-
     <title>Gxme hub | Gxmes</title>
   </head>
-  <body>
+  <body class = "loaded">
     <div class="topnav">
       <a href = "../">Home</a>
       |
@@ -40,7 +33,7 @@
       |
       <a href="https://www.google.com">PANIC!</a>
       |
-      <a href="../partners/">Partners</a>
+      <a href="/partners/index.html">Partnerships</a>
     </div> 
     <br>
     <h1 style="font-size:50px">Gxmes</h1>
@@ -48,20 +41,13 @@
       <input name = "q" type = "text" placeholder = "search for gxmes..."/>
             <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-      <br></br>
-    <script defer>
-    const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
-    })?.q;
-    const paramLow = params ? params.toLowerCase() : ""
-    const listOfGames = ([
-    // add gxmes here
+    <br>
       <div class="dropdown">
   <button class="dropbtn">Filter by genre</button>
   <div class="dropdown-content">
     <a data-type = "pzl" href="#">Puzzle</a>
     <a data-type = "run" href="#">Running</a>
-    <a data-type = "drv" ref="#">Driving/flying</a>
+    <a data-type = "drv" href="#">Driving/Flying</a>
     <a data-type = "sht" href="#">Shooter</a>
     <a data-type = "plt" href="#">Platformer</a>
     <a data-type = "idl" href="#">Idle</a>
@@ -211,13 +197,3 @@
   </body>
 </html>
 </div>
-    ]).filter(e=>e.toLowerCase().match(new RegExp(`^${paramLow}.*`)))
-      listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name}</h2><br>`)
-      document.querySelector("input").value = params
-        elemsrendered()
-        </script>
-<div class="container">
-  <h1 class="heading" data-target-resolver></h1>
-</div>
-  </body>
-</html>
