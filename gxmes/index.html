@@ -184,7 +184,8 @@
     ["Gangster Man 3D","drv"],
     ["Poppys Playtime","hrr"],
     ["Pocket League 3D","drv"],
-    ["Red Ball 4","plt"]
+    ["Red Ball 4","plt"],
+    ["Rally Point 5","drv"]
     ]).filter(e=>e[0].toLowerCase().match(new RegExp(`^${paramLow}.*`))).filter(e=>e[1].match(type))
       listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name[0]}</h2><br>`)
       document.querySelector("input").value = query
