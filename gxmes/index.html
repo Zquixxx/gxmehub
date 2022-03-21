@@ -186,7 +186,8 @@
     ["Pocket League 3D","drv"],
     ["Red Ball 4","plt"],
     ["Rally Point 5","drv"],
-    ["Medival Battle 2P","pzl"]
+    ["Medival Battle 2P","pzl"],
+    ["Ragdoll Battle 2P","sht"]
     ]).filter(e=>e[0].toLowerCase().match(new RegExp(`^${paramLow}.*`))).filter(e=>e[1].match(type))
       listOfGames.forEach(name => document.body.innerHTML += `<h2 class = "h2">${name[0]}</h2><br>`)
       document.querySelector("input").value = query
