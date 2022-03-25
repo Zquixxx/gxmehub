@@ -54,6 +54,7 @@
     <a data-type = "spt" href="#">Sport</a>
     <a data-type = "msc" href="#">Misc</a>
     <a data-type = "hrr" href="#">Horror</a>
+    <a data-type = "app" href="#">Apps</a>
     
     
   </div>
@@ -195,7 +196,8 @@
     ["Cut The Rope","pzl"],
     ["Death Run 3D","plt"],
     ["Cut The Rope Time Travel","pzl"],
-    ["Deal Or No Deal","idl"]
+    ["Deal Or No Deal","idl"],
+    ["Discord","app"]
     
     
     ]).filter(e=>e[0].toLowerCase().match(new RegExp(`^${paramLow}.*`))).filter(e=>e[1].match(type))
