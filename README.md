@@ -11,4 +11,4 @@ Created by the awesome Gxme Hub development team.
 All games hosted on seperate github repositories are to be hosted in this repository (one repo).
 
 
-# Notice; if you take something from this and put it on your site, PLEASE give credits. We do not want anyone stealing Gxme Hub assets and not putting on credit.
+#### Notice; if you take something from this and put it on your site, PLEASE give credits. We do not want anyone stealing Gxme Hub assets and not putting on credit.
